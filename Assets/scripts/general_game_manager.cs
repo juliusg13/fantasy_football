@@ -10,7 +10,7 @@ public class general_game_manager : MonoBehaviour {
     public GameObject gm;
     public string user;
     public string money;
-    Scene currentScene;
+    //Scene currentScene;
     string currentSceneName;
     // Use this for initialization
     void Start () {
@@ -64,7 +64,7 @@ public class general_game_manager : MonoBehaviour {
 
     public void updateSceneName(string nextScene) {
         SceneManager.LoadScene(nextScene);
-        currentScene = SceneManager.GetActiveScene();
+        //currentScene = SceneManager.GetActiveScene();
         currentSceneName = nextScene;
         Debug.Log("switching to: " + currentSceneName);
     }
