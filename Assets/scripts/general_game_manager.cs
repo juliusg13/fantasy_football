@@ -10,9 +10,8 @@ public class general_game_manager : MonoBehaviour {
     public GameObject gm;
     public string user;
     public string money;
-    //Scene currentScene;
     string currentSceneName;
-    // Use this for initialization
+
     void Start () {
         currentSceneName = "main_screen";
     }
@@ -33,13 +32,11 @@ public class general_game_manager : MonoBehaviour {
 
 
             if (currentSceneName == "tables_screen") {
-                //SceneManager.LoadScene("main_screen");
-                //Application.LoadLevel("main_screen");
+
                 callMainScreen();
                 Debug.Log(currentSceneName);
 
             } else if (currentSceneName == "tables_screen_new" || currentSceneName == "tables_screen_join") {
-                //Application.LoadLevel("tables_screen");
                 callTablesScene();
                 Debug.Log(currentSceneName);
 
@@ -48,11 +45,9 @@ public class general_game_manager : MonoBehaviour {
 
     }
     public void callMainScreen() {
-        //SceneManager.LoadScene("main_screen");
         updateSceneName("main_screen");
     }
     public void callTablesScene() {
-        //SceneManager.LoadScene("tables_screen");
         updateSceneName("tables_screen");
     }
     public void callNewTablesScreen() {
@@ -61,12 +56,18 @@ public class general_game_manager : MonoBehaviour {
     public void callJoinTablesScreen() {
         updateSceneName("tables_screen_join");
     }
+    public void callChooseGamesScreen() {
+        updateSceneName("tables_screen_choose_games");
+    }
 
     public void updateSceneName(string nextScene) {
         SceneManager.LoadScene(nextScene);
-        //currentScene = SceneManager.GetActiveScene();
         currentSceneName = nextScene;
         Debug.Log("switching to: " + currentSceneName);
     }
 
 }
+//Scene currentScene;
+//currentScene = SceneManager.GetActiveScene();
+//SceneManager.LoadScene("main_screen");
+//Application.LoadLevel("main_screen");
