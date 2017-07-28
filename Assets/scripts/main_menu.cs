@@ -12,7 +12,6 @@ public class main_menu : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
 	}
 
     public void callTables() {

@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class tables_game_manager : MonoBehaviour {
-    public GameObject options_tables, MGManager;
-    public GameObject gm;
+    public GameObject MGManager, gm, inviteFriends;
+    public bool isItPublicGame;
 
 	// Use this for initialization
 	void Start () {
+        isItPublicGame = true;
+        publicVsPrivateHandler(isItPublicGame);
         /*if(gm = GameObject.Find("MainGameManager")) {
             
         } else {
@@ -20,6 +22,14 @@ public class tables_game_manager : MonoBehaviour {
     void Update() {
         if (gm == null) {
             gm = GameObject.Find("MainGameManager");
+        }
+    }
+
+    public void publicVsPrivateHandler(bool status) {
+        if (status == true) {
+            inviteFriends.SetActive(false);
+        } else {
+            inviteFriends.SetActive(true);
         }
     }
 
