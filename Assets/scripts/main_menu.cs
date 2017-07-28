@@ -4,10 +4,10 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class main_menu : MonoBehaviour {
-
+    GameObject gm;
 	// Use this for initialization
 	void Start () {
-		
+        gm = GameObject.Find("MainGameManager");
 	}
 	
 	// Update is called once per frame
@@ -16,6 +16,6 @@ public class main_menu : MonoBehaviour {
 	}
 
     public void callTables() {
-        SceneManager.LoadScene("tables_screen");
+        gm.GetComponent<general_game_manager>().callTablesScene();
     }
 }
