@@ -39,7 +39,10 @@ public class tables_game_manager : MonoBehaviour {
     public void joinExistingTable() {
         gm.GetComponent<general_game_manager>().callJoinTablesScreen();
     }
-    public void chooseGamesScreen() {
+    public void chooseGamesScene() {
         gm.GetComponent<general_game_manager>().callChooseGamesScreen();
+    }
+    public void inviteFriendsScene() {
+        gm.GetComponent<general_game_manager>().callInviteScreen();
     }
 }

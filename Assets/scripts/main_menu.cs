@@ -17,4 +17,7 @@ public class main_menu : MonoBehaviour {
     public void callTables() {
         gm.GetComponent<general_game_manager>().callTablesScene();
     }
+    public void callProfile() {
+        gm.GetComponent<general_game_manager>().callProfileScene();
+    }
 }

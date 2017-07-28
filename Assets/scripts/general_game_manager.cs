@@ -32,14 +32,16 @@ public class general_game_manager : MonoBehaviour {
 
 
             if (currentSceneName == "tables_screen") {
-
                 callMainScreen();
-                Debug.Log(currentSceneName);
-
             } else if (currentSceneName == "tables_screen_new" || currentSceneName == "tables_screen_join") {
                 callTablesScene();
-                Debug.Log(currentSceneName);
-
+            } else if (currentSceneName == "profile_screen") {
+                callMainScreen();
+            } else if (currentSceneName == "tables_screen_choose_games") {
+                callNewTablesScreen();
+            }
+            else if (currentSceneName == "invite_screen") {
+                callNewTablesScreen();
             }
         } 
 
@@ -58,6 +60,12 @@ public class general_game_manager : MonoBehaviour {
     }
     public void callChooseGamesScreen() {
         updateSceneName("tables_screen_choose_games");
+    } 
+    public void callProfileScene() {
+        updateSceneName("profile_screen");
+    }
+    public void callInviteScreen() {
+        updateSceneName("invite_screen");
     }
 
     public void updateSceneName(string nextScene) {
