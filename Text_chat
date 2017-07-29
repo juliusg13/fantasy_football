@@ -27,12 +27,15 @@ there will be 2 buttons 'more' & 'back'
 
 
 ---------------------
-I need some UI designs. 
-I need a button that says PUBLIC, and the other PRIVATE. 
-neutral color buttons with this text:  PUBLIC,   (blue background white with letters)
-and sexy red, yellow or white or something version of the text: PRIVATE
+I need some UI designs. /ok/
+I need a button that says PUBLIC, and the other PRIVATE.  /done/
+neutral color buttons with this text:  PUBLIC,   (blue background white with letters) // public has collor green//
+and sexy red, yellow or white or something version of the text: PRIVATE  /color RED /
 
 ----------------
-Also i need a button that is just like the "Button_ChooseAGAme" with the text "Invite friends with SMS"
+Also i need a button that is just like the "Button_ChooseAGAme"  // is this like a confirmation button for the games that you choose?//
+                                with the text "Invite friends with SMS" //done: there is a button to invite and one text confirming//
+                                            // 
 ----------------
 Button that says Create, or ADD table you know, upgrade graphics in style to other in this scene.
+                                                              // created a button that says: confim my table //
