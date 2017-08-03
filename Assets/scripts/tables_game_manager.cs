@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class tables_game_manager : MonoBehaviour {
-    public GameObject MGManager, gm, inviteFriends, pubBtn, privBtn;
+    public GameObject MGManager, gm;
+    private GameObject pubBtn, privBtn, inviteFriends;
     public bool isItPublicGame;
     Sprite publicNeutral, privateNeutral, publicSelected, privateSelected;
 
@@ -57,6 +58,7 @@ public class tables_game_manager : MonoBehaviour {
     private void findGameObjects() {
         pubBtn = GameObject.Find("public_btn");
         privBtn = GameObject.Find("private_btn");
+        inviteFriends = GameObject.Find("inviteFriends");
     }
 
     public void createNewTable() {
