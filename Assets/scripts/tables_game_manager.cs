@@ -32,6 +32,9 @@ public class tables_game_manager : MonoBehaviour {
     }
 
     public void publicVsPrivateHandler(bool status) {
+        if(inviteFriends == null) {
+            findGameObjects();
+        }
         if (status == true) {
             inviteFriends.SetActive(false);
             setButtonWithSprite(pubBtn, publicSelected);
@@ -52,7 +55,6 @@ public class tables_game_manager : MonoBehaviour {
         privateNeutral = Resources.Load("Private_Neutral", typeof(Sprite)) as Sprite;
         publicSelected = Resources.Load("Public_Selected", typeof(Sprite)) as Sprite;
         privateSelected = Resources.Load("Private_Selected", typeof(Sprite)) as Sprite;
-        Debug.Log(publicNeutral);
     }
 
     private void findGameObjects() {
