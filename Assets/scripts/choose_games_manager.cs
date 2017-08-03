@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class choose_games_manager : MonoBehaviour {
     public GameObject choose1, choose2;
+    GameObject gm;
 	// Use this for initialization
 	void Start () {
-		
+        gm = GameObject.Find("MainGameManager");
 	}
 	
 	// Update is called once per frame
@@ -26,7 +27,9 @@ public class choose_games_manager : MonoBehaviour {
             choose1.SetActive(false);
             choose2.SetActive(true);
         }
-
     }
 
+    public void callPreviousScene() {
+        gm.GetComponent<general_game_manager>().callNewTablesScreen();
+    }
 }

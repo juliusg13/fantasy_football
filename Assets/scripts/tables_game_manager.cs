@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class tables_game_manager : MonoBehaviour {
     public GameObject MGManager, gm;
     private GameObject pubBtn, privBtn, inviteFriends;
+    private Scene currentScene;
     public bool isItPublicGame;
     Sprite publicNeutral, privateNeutral, publicSelected, privateSelected;
 
@@ -13,16 +15,18 @@ public class tables_game_manager : MonoBehaviour {
 	void Start () {
         setResources();
         findGameObjects();
-        isItPublicGame = true;
-        publicVsPrivateHandler(isItPublicGame);
-
+        currentScene = SceneManager.GetActiveScene();
+        if (currentScene.name == "tables_screen_new") { 
+            isItPublicGame = true;
+            publicVsPrivateHandler(isItPublicGame);
+        }
         /*if(gm = GameObject.Find("MainGameManager")) {
             
         } else {
             gm = GameObject.Instantiate(MGManager, transform.position, transform.rotation);
         }*/
 
-	}
+    }
 
     // Update is called once per frame
     void Update() {
